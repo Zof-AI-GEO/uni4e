@@ -11,7 +11,7 @@ export function MoreStories({ posts }: Props) {
     return null;
   }
 
-  const featurePosts = posts.slice(0, Math.min(posts.length, 6));
+  
 
   return (
     <section id="deep-dives" className="mt-24 animate-fade-up">
@@ -30,7 +30,7 @@ export function MoreStories({ posts }: Props) {
       </div>
 
       <div className="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-        {featurePosts.map((post) => (
+        {posts.map((post) => (
           <PostPreview
             key={post.slug}
             title={post.title}
